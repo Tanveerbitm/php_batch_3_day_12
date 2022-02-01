@@ -20,7 +20,7 @@
             </ul>
         </div>
     </nav>
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light ">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto" >
@@ -29,29 +29,48 @@
                         <div class="card-body">
                             <form action="action.php" method="post">
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">First Name</label>
+                                    <label class="col-md-3 col-form-label">Select Action</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="first_name"/>
+                                        <label class="col-form-label"><input type="radio"  value="+" name="operator"/>Addition</label>
+                                        <label class="col-form-label"><input type="radio"  value="-" name="operator"/>Subtraction</label>
+                                        <label class="col-form-label"><input type="radio"  value="*" name="operator"/>multiplication</label>
+                                        <label class="col-form-label"><input type="radio"  value="/" name="operator"/>Divition</label>
+                                        <label class="col-form-label"><input type="radio"  value="%" name="operator"/>Modulus</label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Last Name</label>
+                                    <label class="col-md-3 col-form-label">First Number</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="last_name"/>
+                                        <input type="number" class="form-control" name="first_number"/>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Full Name</label>
+                                    <label class="col-md-3 col-form-label">Second Number</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" value="<?php echo isset($result)?$result:'' ;?>"/>
+                                        <input type="number" class="form-control" name="second_number"/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">Result</label>
+                                    <div class="col-md-9">
+                                        <input type="text" readonly class="form-control" value="<?php echo isset($calculator->result)?$calculator->result:'' ;?>"/>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9">
-                                        <input type="submit" class="btn btn-outline-success" value="submit" name="btn"/>
-                                    </div>
-                                </div>
+
+                                        <label class="col-form-label">
+                                        <input type="submit" class="btn btn-outline-success" value="submit" /></label>
+<!--                                        <label class=" col-form-label">-->
+<!--                                        <input type="submit" class="btn btn-outline-success" value="-" name="operator"/></label>-->
+<!--                                        <label class="col-form-label">-->
+<!--                                        <input type="submit" class="btn btn-outline-success" value="*" name="operator"/></label>-->
+<!--                                        <label class="col-form-label">-->
+<!--                                        <input type="submit" class="btn btn-outline-success" value="/" name="operator"/></label>-->
+<!--                                        <label class="col-form-label">-->
+<!--                                        <input type="submit" class="btn btn-outline-success" value="%" name="operator"/></label>-->
+                            </div>
                             </form>
                         </div>
                     </div>
@@ -64,3 +83,4 @@
 <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>
+

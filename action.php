@@ -1,8 +1,8 @@
 <?php
 
 require_once 'vendor/autoload.php';
-use App\classes\FullName;
+use App\classes\Calculator;
 
-$fullName = new FullName($_POST);
-$result = $fullName->index();
+$calculator = new Calculator($_POST);
+
 include 'index.php';
